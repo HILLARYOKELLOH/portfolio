@@ -545,18 +545,18 @@
                     icon: "warning",
                 });
 
-            } else if (email != pattern) {
-                swal({
-                    title: "Failed",
-                    text: "Email missing @",
-                    icon: "warning",
-                });
-
-            } else {
+            } else if (mail.match(pattern)) {
                 swal({
                     title: "Good job!",
                     text: "Message Send Successfully",
                     icon: "success",
+                });
+
+            } else {
+                swal({
+                    title: "Failed",
+                    text: "That's not a valid email",
+                    icon: "warning",
                 });
             }
         })
